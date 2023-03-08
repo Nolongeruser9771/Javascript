@@ -32,16 +32,16 @@ function translate(code) {
     let greeting;
     switch(code.toLowerCase()) {
         
-        case "VN".toLowerCase():
+        case "vn":
             greeting ="Xin chào";
             break;
-        case "EN".toLowerCase():
+        case "en":
             greeting ="Hello";
             break;  
-        case "JP".toLowerCase():
+        case "jp":
             greeting ="Konichiwa";
             break;  
-        case "FR".toLowerCase():
+        case "fr":
             greeting ="Bonjour";
             break;
         default:
