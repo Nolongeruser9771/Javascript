@@ -2,13 +2,15 @@
     let heading = document.getElementById('heading');
     heading.style.color = 'red';
     heading.style.textTransform = 'uppercase';
+
 //2. Thay đổi màu chữ của tất cả thẻ có class “para” thành màu “blue” và có font-size = “20px”
     let para = document.querySelectorAll('.para')
     console.log(para);
-    for(let i=0; i<para.length;i++) {
-        para[i].style.color = 'blue';
-        para[i].style.fontSize = '20px';
-    }
+    Array.from(para).map(e => {
+        e.style.color = 'blue';
+        e.style.fontSize = '20px';
+    })
+
 //3. Thêm thẻ a link đến trang ‘facebook’ ở đằng sau thẻ có class “para-3”
     let a = document.createElement('a');
     a.href = 'https://www.facebook.com/';
@@ -27,6 +29,7 @@
 //5. Thêm class “text-bold” vào thẻ có class=“description” (định nghĩa class “text-bold” có tác dụng in đậm chữ)
     let descript = document.querySelector('.description');
     descript.classList.add('text-bold');
+    
 //6. Thay thế thẻ có class=“para-3” thành thẻ button có nội dung là “Click me”
     let button = document.createElement('button');
     button.innerHTML = 'Click me';
