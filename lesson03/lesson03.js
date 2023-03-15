@@ -58,12 +58,13 @@
     })
 
 // Câu 6: Thêm 1 nút “Hide” trên đầu của danh sách <ul>.
+// Khi bấm vào “Hide” thì <ul> sẽ ẩn. Đồng thời label của nút “Hide” => “Show”
+// Và ngược lại Khi bấm vào “Show” thì <ul> sẽ hiện. Đồng thời label của nút “Show” => “Hide”
+
     let hide = document.createElement('button');
     hide.innerText = 'hide';
     ulList.insertAdjacentElement('beforebegin',hide);
 
-// Câu 7: Khi bấm vào “Hide” thì <ul> sẽ ẩn. Đồng thời label của nút “Hide” => “Show”
-// Câu 8: Và ngược lại Khi bấm vào “Show” thì <ul> sẽ hiện. Đồng thời label của nút “Show” => “Hide”
     hide.addEventListener('click',()=>{
         ulList.classList.toggle('display');
         if(hide.innerText=='hide') {
