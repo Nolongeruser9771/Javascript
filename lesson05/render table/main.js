@@ -92,29 +92,29 @@ let student_warning = {
             for(let j = 0; j< rowNum;j++) {
                 const row = document.createElement("tr");
 
-                    if(j==0) {  //dòng đầu tiên: có 8 cột
-                        for(let k = 0 ; k < 8; k++) {
-                            const cell = document.createElement("td");
+                if(j==0) {  //dòng đầu tiên: có 8 cột
+                    for(let k = 0 ; k < 8; k++) {
+                        const cell = document.createElement("td");
                             
-                            let cellText = colInsert(i,j,k); //lấy thông tin cho từng ô
-                            (k>=0 && k<=4)? cell.rowSpan = `${rowNum}`:cell; //rowSpan 5 cột đầu
-                            (k==4||k==5)? cell.style.textAlign = "center":cell; //canh giữa cột 5,6
+                        let cellText = colInsert(i,j,k); //lấy thông tin cho từng ô
+                        (k>=0 && k<=4)? cell.rowSpan = `${rowNum}`:cell; //rowSpan 5 cột đầu
+                        (k==4||k==5)? cell.style.textAlign = "center":cell; //canh giữa cột 5,6
                             
-                            cell.innerHTML = cellText; //gán thông tin cho ô
-                            row.appendChild(cell); //thêm ô vào dòng
-                        }
+                        cell.innerHTML = cellText; //gán thông tin cho ô
+                        row.appendChild(cell); //thêm ô vào dòng
                     }
+                }
                         
-                    if(j>0) { //từ dòng 2 trở đi, chỉ có 3 cột
-                        for(let k = 5 ; k < 8; k++) {
-                            const cell = document.createElement("td");
+                if(j>0) { //từ dòng 2 trở đi, chỉ có 3 cột
+                    for(let k = 5 ; k < 8; k++) {
+                        const cell = document.createElement("td");
 
-                            let cellText = colInsert(i,j,k);
-                            cell.innerHTML = cellText;
-                            (k==5)? cell.style.textAlign = "center":cell;
-                            row.appendChild(cell);
-                        }
+                        let cellText = colInsert(i,j,k);
+                        cell.innerHTML = cellText;
+                        (k==5)? cell.style.textAlign = "center":cell;
+                        row.appendChild(cell);
                     }
+                }
 
                 tblBody.appendChild(row); //thêm dòng vào table
             }
