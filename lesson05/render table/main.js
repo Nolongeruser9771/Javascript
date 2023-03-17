@@ -96,7 +96,7 @@ let student_warning = {
                         for(let k = 0 ; k < 8; k++) {
                             const cell = document.createElement("td");
                             
-                            let cellText = ColInsert(i,j,k); //lấy thông tin cho từng ô
+                            let cellText = colInsert(i,j,k); //lấy thông tin cho từng ô
                             (k>=0 && k<=4)? cell.rowSpan = `${rowNum}`:cell; //rowSpan 5 cột đầu
                             (k==4||k==5)? cell.style.textAlign = "center":cell; //canh giữa cột 5,6
                             
@@ -109,7 +109,7 @@ let student_warning = {
                         for(let k = 5 ; k < 8; k++) {
                             const cell = document.createElement("td");
 
-                            let cellText = ColInsert(i,j,k);
+                            let cellText = colInsert(i,j,k);
                             cell.innerHTML = cellText;
                             (k==5)? cell.style.textAlign = "center":cell;
                             row.appendChild(cell);
@@ -121,7 +121,7 @@ let student_warning = {
         }
     }
 
-    function ColInsert(i,j,k){ //thông tin tương ứng mỗi cột
+    function colInsert(i,j,k){ //thông tin tương ứng mỗi cột
         switch(k) {
             case 0:
                 cellText = `${i+1}`;
