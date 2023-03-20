@@ -45,7 +45,7 @@
         })
         return userFilter;
     }
-console.log(userFilter(users));
+    console.log(userFilter(users));
 
 // Viết function truyền vào 1 mảng các object user. Trả về mảng các user có age tăng dần
     function userSort(users) {
@@ -70,19 +70,22 @@ console.log(userFilter(users));
         let eleObj = new Object();
 
         uniqueEles.forEach(e=>{
-            eleObj[`${e}`] = function () {
-                count=0;
-                elements.forEach(eles =>{
-                    if(eles==e) {
-                        count++;
-                    }  
-                })
-                return count;
-            }
+            eleObj[`${e}`] = freq(e);
             }
         )
 
         return eleObj;
+    }
+
+    function freq(e) {
+        let count=0;
+        
+        elements.forEach(eles =>{
+            if(eles==e) {
+                count++;
+            }  
+        })
+        return count;
     }
 
     console.log(objCreate(elements));
