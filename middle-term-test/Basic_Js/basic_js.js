@@ -67,21 +67,23 @@ console.log(userFilter(users));
             }
         })
 
-        let eleObj = {key:value};
+        let eleObj = new Object();
 
         uniqueEles.forEach(e=>{
-            eleObj.key = e;
-            eleObj.value = function (e) {
-                count =0;
-                elements.forEach(eles => {
+            eleObj[`${e}`] = function () {
+                count=0;
+                elements.forEach(eles =>{
                     if(eles==e) {
                         count++;
-                    }
-                    return count;
+                    }  
                 })
+                return count;
             }
-        })
+            }
+        )
 
         return eleObj;
     }
+
+    console.log(objCreate(elements));
 
