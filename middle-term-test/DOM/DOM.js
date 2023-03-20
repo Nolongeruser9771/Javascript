@@ -57,7 +57,7 @@ const quizes = [
     btn.addEventListener('click', ()=> {
         quizes.forEach(quiz => {
             let quizNum = quiz.id;
-            let randomIndex = Math.floor(Math.random()*(quiz.answers.length-1));
+            let randomIndex = Math.floor(Math.random()*(quiz.answers.length));
             let selectedAnswer = quiz.answers[randomIndex];
             console.log(selectedAnswer);
             
