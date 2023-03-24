@@ -17,7 +17,7 @@ function ItemRender() {
 
     function removeItem() {
         if(items.length!=0) {
-            const removeItem = items.splice(items.length-1,1);
+            const removeItem = items[items.length-1];
             setItems(items => items.filter(i => i!=removeItem));
         }
     }
