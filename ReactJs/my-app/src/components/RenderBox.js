@@ -41,15 +41,16 @@ function RenderBox() {
     let point = boxes.length;
 
     return (
-        <div class="wrap">
+        <div className="wrap">
             <h1>JS DOM</h1>
             <button id="btn" onClick={()=>addBox()}>More boxes</button>
             <h4 id="score"> Total box: <span>{point}</span></h4>
 
-            <div class="boxes">
+            <div className="boxes">
                 {boxes.map(boxColor => {
                     return (
-                    <div onClick={()=>disappearBox(boxColor.id)}  
+                    <div onClick={()=>disappearBox(boxColor.id)}
+                        key={boxColor.id}
                         className="box" 
                         style={{backgroundColor:boxColor.value}}>
                     </div>)
