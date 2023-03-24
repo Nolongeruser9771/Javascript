@@ -4,7 +4,7 @@ function ItemRender() {
     //Hook - useState
     const [newItem, setNewItem] = useState("");
     const [items, setItems] = useState([]);
-    const [displayText, setDisplayText] = useState("Show");
+    const [displayText, setDisplayText] = useState("Hide");
     const [displayStyle, setDisplayStyle] = useState("block");
 
     //helper function
