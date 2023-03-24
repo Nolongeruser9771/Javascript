@@ -10,15 +10,19 @@ function ItemRender() {
     //helper function
     function addItem() {
         if(newItem!="") {
-            setItems(oldLists => [...oldLists, newItem]);
+            const item = {
+                id: Math.floor(Math.random()*1000),
+                value: newItem
+            }
+            setItems(oldLists => [...oldLists, item]);
             setNewItem("");
         }
     };
 
     function removeItem() {
         if(items.length!=0) {
-            const removeItem = items[items.length-1];
-            setItems(items => items.filter(i => i!=removeItem));
+            const removeItemID = items[items.length-1].id;
+            setItems(items => items.filter(i => i.id!==removeItemID));
         }
     }
 
@@ -47,7 +51,7 @@ function ItemRender() {
         <button onClick={() => display()}>{displayText}</button>
         <ul style={{display:displayStyle}}>
             {items.map(item => {
-               return <li>{item}</li>
+               return <li key={item.id}>{item.value}</li>
             })}
         </ul>
     </div>
