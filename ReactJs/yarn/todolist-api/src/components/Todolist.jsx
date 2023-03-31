@@ -126,6 +126,7 @@ function Todolist() {
             </div>
 
             <div className='todo-list'>
+                <div className={todos.length!==0?"empty-list":""}>Danh sách công việc trống</div>
                 <ul>
                     {todos.length > 0 &&
                     todos.map((todo) => (

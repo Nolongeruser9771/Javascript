@@ -78,3 +78,6 @@ h3 {
   color: brown;
   text-decoration: line-through;
 }
+.empty-list {
+  display: none;
+}
