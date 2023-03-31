@@ -38,7 +38,7 @@ function App() {
   //edit tasks
   const onEditBtnClick = (id)=> {
     const taskEdit = prompt("Enter your edit");
-    if(taskEdit!=="") {
+    if(taskEdit!=="" && taskEdit!==undefined && taskEdit!==null) {
     setTodoList(oldlist => oldlist.map(todo =>
       todo.id===id? ({...todo, name: taskEdit}) :todo
       ))
